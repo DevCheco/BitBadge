@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificados Académicos - BitBadge</title>
+  
+  <!-- SEO -->
+  <meta name="description" content="Portafolio de certificados académicos y logros profesionales.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/slider.css">
+</head>
+<body>
+
+  <!-- Abstract Background Shapes -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+
+  <header class="header">
+    <h1>Mis Certificados</h1>
+    <p>Un recorrido por mi formación académica y tecnológica</p>
+  </header>
+
+  <main class="main-container">
+    <div class="slider-wrapper">
+
+      <!-- Slider Track (slides se inyectan aquí vía JS) -->
+      <div class="slider-track" id="slider-track"></div>
+
+      <!-- Controles de Navegación -->
+      <div class="slider-controls">
+        <button class="nav-btn" id="prev-btn" aria-label="Certificado anterior">
+          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+        <button class="nav-btn" id="next-btn" aria-label="Certificado siguiente">
+          <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
+      </div>
+
+      <!-- Indicadores -->
+      <div class="slider-dots" id="slider-dots"></div>
+
+    </div>
+  </main>
+
+
+  <!-- PDF.js Library (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  
+  <!-- JS Applications -->
+  <script src="js/pdf-renderer.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

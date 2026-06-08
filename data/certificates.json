@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Especialización en Inteligencia Artificial",
+    "issuer": "Alura Latam",
+    "pdfUrl": "assets/pdfs/Certificado_Alura_IA.pdf"
+  },
+  {
+    "id": 2,
+    "title": "Certificado Profesional",
+    "issuer": "Plataforma Educativa",
+    "pdfUrl": "assets/pdfs/certificate (1).pdf"
+  },
+  {
+    "id": 3,
+    "title": "Curso Avanzado de Curso Avanzado de Excel, Análisis y Excel, Análisis y Visualización de Datos",
+    "issuer": "Codigo Facilito",
+    "pdfUrl": "assets/pdfs/1780363444733-875699063.pdf"
+  },
+  {
+    "id": 4,
+    "title": "Curso de Visual Studio Curso de Visual Studio Code y GitHub Copilot Code y GitHub Copilo",
+    "issuer": "Codigo Facilito",
+    "pdfUrl": "assets/pdfs/1780363873296-14905937.pdf"
+  }
+]

@@ -1,0 +1,71 @@
+/* ============================================
+   MAIN — Layout & Fondo de Página
+   ============================================ */
+
+/* Tipografía de Google Fonts se importa en index.html */
+
+body {
+  background-color: var(--bg-page);
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  box-sizing: border-box;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(200,169,110,0.06), transparent);
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 1.25rem;       /* Reducido para ganar espacio vertical */
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.header h1 {
+  font-size: 1.25rem;           /* Más compacto */
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.header h1::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.header p {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Contenedor principal ── */
+.main-container {
+  width: 100%;
+  max-width: 1100px;
+  flex: 1;                      /* Ocupa el espacio restante */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* Para que en pantallas pequeñas no empuje hacia arriba sobre el header */
+  align-items: center;
+  min-height: 0;                /* Necesario para que flex no desborde */
+}
+
+.bg-shape { display: none; }

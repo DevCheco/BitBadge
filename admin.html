@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - BitBadge</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <header class="header">
+    <h1>Dashboard</h1>
+    <p>Administración de Certificados</p>
+  </header>
+
+  <main class="admin-container">
+    <div class="admin-grid">
+      
+      <!-- Panel de subida -->
+      <section class="admin-card">
+        <h2>Subir Nuevo Certificado</h2>
+        <form id="upload-form" class="upload-form">
+          <div class="form-group">
+            <label for="title">Título del Certificado</label>
+            <input type="text" id="title" name="title" required placeholder="Ej: Bootcamp Fullstack">
+          </div>
+          
+          <div class="form-group">
+            <label for="issuer">Institución / Escuela</label>
+            <input type="text" id="issuer" name="issuer" required placeholder="Ej: Alura Latam">
+          </div>
+          
+          <div class="form-group">
+            <label for="pdf">Archivo PDF</label>
+            <div class="file-drop-area" id="drop-area">
+              <span class="file-msg">Arrastra tu PDF aquí o haz clic para seleccionar</span>
+              <input type="file" id="pdf" name="pdf" accept=".pdf" required class="file-input">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submit-btn">
+            Guardar Certificado
+          </button>
+          
+          <div id="status-msg" class="status-msg"></div>
+        </form>
+      </section>
+
+      <!-- Lista de certificados actuales -->
+      <section class="admin-card list-card">
+        <h2>Certificados Actuales</h2>
+        <div class="cert-list" id="cert-list">
+          <div class="loading">Cargando certificados...</div>
+        </div>
+      </section>
+
+    </div>
+    
+    <div class="back-link">
+      <a href="/">&larr; Volver al Portafolio</a>
+    </div>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
