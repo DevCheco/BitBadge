@@ -12,13 +12,15 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Servir archivos estáticos (frontend)
-app.use(express.static(path.join(__dirname)));
+const publicPath = path.join(__dirname, 'public');
 
-// Configuración de Multer para guardar archivos en assets/pdfs
+// Servir archivos estáticos (frontend)
+app.use(express.static(publicPath));
+
+// Configuración de Multer para guardar archivos en public/assets/pdfs
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, 'assets', 'pdfs'));
+    cb(null, path.join(publicPath, 'assets', 'pdfs'));
   },
   filename: (req, file, cb) => {
     // Generar un nombre único para evitar sobrescribir
@@ -40,12 +42,12 @@ const upload = multer({
 
 // Ruta para la página principal
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(publicPath, 'index.html'));
 });
 
 // Ruta para el dashboard de administración
 app.get('/admin', (req, res) => {
-  res.sendFile(path.join(__dirname, 'admin.html'));
+  res.sendFile(path.join(publicPath, 'admin.html'));
 });
 
 // API: Obtener certificados
